@@ -27,5 +27,13 @@ pipeline{
             sh 'mvn clean install'
         }
       }  
+      stage('Static Code Anyalsis'){
+        
+        steps{
+            withSonarQubeEnv(credentialsId: 'ruket') {
+    // some block
+}
+        }
+      }  
    }
 }
