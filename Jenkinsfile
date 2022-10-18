@@ -30,9 +30,11 @@ pipeline{
       stage('SonarQube Anyalsis'){
         
         steps{
+           scripts{
             withSonarQubeEnv(credentialsId: 'sq') {
               sh 'mvn clean package sonar:sonar'
 }
+        }
         }
       }  
    }
