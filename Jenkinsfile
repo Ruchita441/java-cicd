@@ -30,7 +30,7 @@ pipeline{
       stage('Static Code Anyalsis'){
         
         steps{
-            withSonarQubeEnv(credentialsId: 'dockerhubpassword') {
+            withSonarQubeEnv(credentialsId: 'sq') {
               sh 'mvn clean package sonar:sonar'
 }
         }
