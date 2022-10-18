@@ -27,7 +27,7 @@ pipeline{
             sh 'mvn clean install'
         }
       }  
-      stage('Static Code Anyalsis'){
+      stage('SonarQube Anyalsis'){
         
         steps{
             withSonarQubeEnv(credentialsId: 'sq') {
